@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jkt.appbar.activities.MainActivity">
+
+    <include layout="@layout/common_appbar" />
+
+
+    <Button
+        android:id="@+id/bn_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="bnClick"
+        android:text="标准样式" />
+
+    <Button
+        android:id="@+id/bn_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="bnClick"
+        android:text="自定义样式" />
+
+
+</LinearLayout>

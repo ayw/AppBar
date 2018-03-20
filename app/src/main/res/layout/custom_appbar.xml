@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/custom_appbar_ll"
+              android:background="@color/colorBlue"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/custom_appbar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp">
+        <ImageView
+            android:background="@drawable/common_ripple"
+            android:id="@+id/custom_appbar_one_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="14dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="15dp"
+            android:paddingTop="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"
+            tools:targetApi="lollipop"/>
+
+        <ImageView
+            android:background="@drawable/common_ripple"
+            android:id="@+id/custom_appbar_two_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/custom_appbar_one_iv"
+            android:paddingBottom="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="12dp"
+            android:paddingTop="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"
+            tools:targetApi="lollipop"/>
+
+        <TextView
+            android:id="@+id/custom_appbar_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxEms="12"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"
+            android:text="需求管理"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:background="@drawable/common_ripple"
+            android:id="@+id/custom_appbar_three_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/custom_appbar_four_iv"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="2dp"
+            android:paddingTop="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"
+            tools:targetApi="lollipop"/>
+
+        <ImageView
+            android:background="@drawable/common_ripple"
+            android:id="@id/custom_appbar_four_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"
+            tools:targetApi="lollipop"/>
+    </RelativeLayout>
+</LinearLayout>
