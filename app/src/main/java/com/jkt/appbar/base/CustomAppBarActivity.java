@@ -22,6 +22,7 @@ import com.jkt.appbar.util.DensityUtil;
 /**
  * Created by Allen at 2017/7/13 15:05
  */
+//实际开发让该类继承自己写的BaseActivity,不推荐所有逻辑都放在BaseActivity，这样层次分明
 public abstract class CustomAppBarActivity extends AppCompatActivity {
     private int[] mResArray;
     private ImageView mThreeIV;
@@ -31,6 +32,13 @@ public abstract class CustomAppBarActivity extends AppCompatActivity {
     }
 
     protected void initAppBar(boolean isOne, boolean isTwo, boolean isThree, boolean isFour, @ColorRes int bgColor, @ColorRes int textColor) {
+        //下面三行代码是动态加载布局文件，采用这种方式的话，不需要在xml布局include
+        //采用该方式的小伙伴记得在 xml删除include代码 ,避免造成重复
+        //该方法的唯一弊端,我们在写布局的时候design页面会出现导航栏空白,
+        // 毕竟是代码动态加载布局的，自行选择自己喜欢的方式
+//        ViewGroup outView = (ViewGroup) ((ViewGroup) findViewById(android.R.id.content)).getChildAt(0);
+//        View inflate = LayoutInflater.from(this).inflate(R.layout.custom_appbar, outView, false);
+//        outView.addView(inflate, 0);
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.custom_appbar_rl);
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.custom_appbar_ll);
         if (layout == null) {
